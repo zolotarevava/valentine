@@ -55,7 +55,7 @@ body{
 /* Фото */
 .row img{
   width: 190px;
-  height: 230px;
+  height: 250px;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 10px 22px rgba(0,0,0,.15);
@@ -115,6 +115,7 @@ body::before{
   .row-6{ grid-template-columns: repeat(2, 1fr); }
   .row{ padding: 12px; }
 }
+
 
 
 
