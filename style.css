@@ -41,15 +41,10 @@ body{
   gap: var(--gap);
 }
 
-/* Ряд */
 .row{
-  background: var(--card);
-  backdrop-filter: blur(6px);
-  padding: var(--gap);
-  border-radius: var(--radius);
-  box-shadow: 0 14px 40px rgba(0,0,0,.10);
-  display:grid;
-  gap: var(--gap);
+  display: grid;
+  gap: 16px;
+  justify-items: center;
 }
 
 /* 5 колонок */
@@ -60,13 +55,13 @@ body{
 
 /* Фото */
 .row img{
-  width:100%;
-  aspect-ratio: 1 / 1;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 8px 18px rgba(0,0,0,.12);
-  transform: translateZ(0);
-  transition: transform .18s ease, box-shadow .18s ease;
+  border-radius: 18px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.15);
+  transition: transform .2s ease, box-shadow .2s ease;
+  background: #fff;
 }
 
 .row img:hover{
@@ -124,6 +119,13 @@ body{
   z-index: 1;
 }
 
+@media (max-width: 600px){
+  .row img{
+    width: 120px;
+    height: 120px;
+  }
+}
+
 /* Адаптив под телефон */
 @media (max-width: 900px){
   .row-5{ grid-template-columns: repeat(3, 1fr); }
@@ -135,3 +137,4 @@ body{
   .row-6{ grid-template-columns: repeat(2, 1fr); }
   .row{ padding: 12px; }
 }
+
